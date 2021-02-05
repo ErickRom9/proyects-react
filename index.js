@@ -18,7 +18,7 @@ app.use(express.json({ extended: true}));
 
 //crear un puerto de la app
 
-const PORT = process.env.PORT || 4000; //SI NO TIENEN PUERTO DISPONIBLE HERAKOO SE LE ASIGNA EL 4000
+const port = process.env.PORT || 4000; //SI NO TIENEN PUERTO DISPONIBLE HERAKOO SE LE ASIGNA EL 4000
 
 
 //Importar rutas
@@ -38,6 +38,6 @@ app.use('/api/tareas', require('./routes/tareas')); //se importa en el de tareas
 
 //Iniciar la app
 
-app.listen(PORT, () =>{
+app.listen(port, '0.0.0.0', () =>{
     console.log(`el servidor esta funcionando en el puerto ${PORT}`);
 });
